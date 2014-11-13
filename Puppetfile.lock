@@ -1,0 +1,87 @@
+FORGE
+  remote: https://forgeapi.puppetlabs.com
+  specs:
+    acme/ohmyzsh (0.1.2)
+      puppetlabs/stdlib (>= 0)
+    darin/zypprepo (1.0.1)
+    maestrodev/ant (1.0.5)
+      maestrodev/wget (>= 1.0.0)
+      puppetlabs/stdlib (>= 3.2.0)
+    maestrodev/maven (1.2.1)
+      maestrodev/wget (>= 1.0.0)
+    maestrodev/rvm (1.5.9)
+      puppetlabs/stdlib (>= 3.2.0)
+    maestrodev/wget (1.5.6)
+    nightfly/ssh_keys (0.0.1)
+      puppetlabs/concat (>= 1.0.0)
+    puppetlabs/apt (1.5.1)
+      puppetlabs/stdlib (>= 2.2.1)
+    puppetlabs/concat (1.1.0)
+      puppetlabs/stdlib (>= 4.0.0)
+    puppetlabs/gcc (0.2.0)
+    puppetlabs/git (0.2.0)
+      puppetlabs/vcsrepo (>= 0.1.0)
+    puppetlabs/java (1.1.1)
+      puppetlabs/stdlib (>= 0.1.6)
+    puppetlabs/mongodb (0.8.0)
+      puppetlabs/apt (>= 1.0.0)
+      puppetlabs/stdlib (>= 2.2.0)
+    puppetlabs/nodejs (0.6.1)
+      puppetlabs/apt (>= 0.0.3)
+      puppetlabs/stdlib (>= 2.0.0)
+    puppetlabs/stdlib (4.2.2)
+    puppetlabs/vcsrepo (1.0.2)
+    rtyler/jenkins (1.1.0)
+      darin/zypprepo (>= 1.0.1)
+      puppetlabs/apt (>= 0.0.3)
+      puppetlabs/java (>= 1.0.1)
+      puppetlabs/stdlib (>= 2.0.0)
+    saz/ssh (2.4.0)
+      puppetlabs/stdlib (>= 2.2.1)
+    saz/sudo (3.0.9)
+      puppetlabs/stdlib (>= 2.3.0)
+    thomasvandoren/redis (0.10.0)
+      maestrodev/wget (>= 1.1.0)
+      puppetlabs/gcc (>= 0.0.3)
+    viirya/hadoop (0.0.18)
+      puppetlabs/stdlib (>= 3.2.0)
+      viirya/java (= 0.0.5)
+    viirya/java (0.0.5)
+
+GIT
+  remote: git://github.com/77agency/puppet-nginx.git
+  ref: master
+  sha: 3cb9a95cfb604fac055935997faa662b4658281d
+  specs:
+    jfryman/nginx (0.0.9)
+      puppetlabs/apt (>= 1.0.0)
+      puppetlabs/concat (>= 1.1.0)
+      puppetlabs/stdlib (>= 3.0.0)
+
+GIT
+  remote: https://github.com/clascu/puppet-single_user_rvm
+  ref: master
+  sha: de3186fd14f5eceaee6e2c4206eb5eada70f723e
+  specs:
+    eirc/single_user_rvm (0.4.0)
+
+DEPENDENCIES
+  acme/ohmyzsh (>= 0)
+  acme/ohmyzsh (>= 0)
+  eirc/single_user_rvm (>= 0)
+  jfryman/nginx (>= 0)
+  maestrodev/ant (>= 0)
+  maestrodev/maven (>= 0)
+  maestrodev/rvm (>= 0)
+  nightfly/ssh_keys (>= 0)
+  puppetlabs/git (>= 0)
+  puppetlabs/java (>= 0)
+  puppetlabs/mongodb (>= 0)
+  puppetlabs/nodejs (>= 0)
+  puppetlabs/vcsrepo (>= 0)
+  rtyler/jenkins (>= 0)
+  saz/ssh (>= 0)
+  saz/sudo (>= 0)
+  thomasvandoren/redis (>= 0)
+  viirya/hadoop (>= 0)
+
