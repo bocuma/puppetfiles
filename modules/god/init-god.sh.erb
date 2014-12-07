@@ -8,8 +8,8 @@ DESC=god
 
 set -e
 
-RVM_PATH= "<%= rvm_path %>"
-RUBY_VERSION="<%= ruby_version %>"
+RVM_PATH= "<%= @rvm_path %>"
+RUBY_VERSION="<%= @ruby_version %>"
 PID_FILE="/var/run/god.pid"
 LOG_FILE="/var/log/god.log"
 CONFIG_FILE="/etc/god/god.conf"
