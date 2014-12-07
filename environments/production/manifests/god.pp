@@ -21,5 +21,3 @@ define bocuma::god ($state = 'present', $ruby = 'ruby-2.0.0-p451', $version = 'l
   }
 }
 
-bocuma::god {'test':}
-
