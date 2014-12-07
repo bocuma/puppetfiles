@@ -2,7 +2,18 @@ define bocuma::god ($state = 'present', $ruby = 'ruby-2.0.0-p451', $version = 'l
 
   if !defined(Class['rvm']) {
    include rvm
-  } ->
+  } 
+
+  file { "god-dir":
+      path => "/etc/god",
+      ensure => "directory"
+  }
+
+  file {"god-config": 
+    path => "/etc/god/god.conf",
+    require => File["god-dir"],
+    content => "God.load \"/etc/god/conf.d/*.god\""
+  }
   if (!defined(Rvm_system_ruby[$ruby])) {
     rvm_system_ruby {
       $ruby:
