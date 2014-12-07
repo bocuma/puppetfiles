@@ -19,8 +19,6 @@ FORGE
     puppetlabs/concat (1.1.0)
       puppetlabs/stdlib (>= 4.0.0)
     puppetlabs/gcc (0.2.0)
-    puppetlabs/git (0.2.0)
-      puppetlabs/vcsrepo (>= 0.1.0)
     puppetlabs/java (1.1.1)
       puppetlabs/stdlib (>= 0.1.6)
     puppetlabs/mongodb (0.8.0)
@@ -57,6 +55,13 @@ GIT
       puppetlabs/apt (>= 1.0.0)
       puppetlabs/concat (>= 1.1.0)
       puppetlabs/stdlib (>= 3.0.0)
+
+GIT
+  remote: https://github.com/cammellos/puppetlabs-git.git
+  ref: bug/master/install_unless_defined
+  sha: 7a424aaa8605f4f00561a7999fc6d51d8db28d2f
+  specs:
+    puppetlabs/git (0.0.1)
 
 GIT
   remote: https://github.com/clascu/puppet-single_user_rvm

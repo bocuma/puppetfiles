@@ -7,7 +7,8 @@ forge "https://forgeapi.puppetlabs.com"
 # A module from the Puppet Forge
 mod 'jfryman/nginx',
   :git => "git://github.com/77agency/puppet-nginx.git"
-mod 'puppetlabs/git'
+mod 'puppetlabs/git',
+  git: "https://github.com/cammellos/puppetlabs-git.git", ref: "bug/master/install_unless_defined"
 mod 'nightfly/ssh_keys'
 mod 'puppetlabs/vcsrepo'
 mod 'acme/ohmyzsh'
