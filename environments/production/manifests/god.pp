@@ -2,13 +2,13 @@ define bocuma::god ($state = 'present', $ruby = 'ruby-2.0.0-p451', $version = 'l
 
   if !defined(Class['rvm']) {
    include rvm
-  }
-
+  } ->
   if (!defined(Rvm_system_ruby[$ruby])) {
     rvm_system_ruby {
       $ruby:
         ensure      => $state,
-        default_use => false;
+        default_use => false,
+        require => Class['rvm']
     }
   }
 
