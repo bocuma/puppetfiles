@@ -1,20 +1,23 @@
 class bocuma::nokogiri {
-  package {"ruby-devel":
+  case $operatingsystem {
+    centos: {$dev = "devel"}
+    redhat: {$dev = "devel"}
+    default: { $dev = "dev"}
+  }
+  package {"ruby-$dev":
    ensure => "installed"
   }
   package {"libxml2":
    ensure => "installed"
   }
-  package {"libxml2-devel":
+  package {"libxml2-$dev":
    ensure => "installed"
   }
-
   package {"libxslt":
    ensure => "installed"
   }
 
-  package {"libxslt-devel":
+  package {"libxslt-$dev":
    ensure => "installed"
   }
-
 }
