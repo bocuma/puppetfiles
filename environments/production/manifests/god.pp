@@ -8,6 +8,11 @@ define bocuma::god ($state = 'present', $ruby = 'ruby-2.0.0-p451', $version = 'l
       path => "/etc/god",
       ensure => "directory"
   }
+  file { "god-conf-dir":
+      path => "/etc/god/conf.d",
+      ensure => "directory"
+  }
+
 
   file {"god-config": 
     path => "/etc/god/god.conf",
