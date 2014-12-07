@@ -24,7 +24,8 @@ define bocuma::god ($state = 'present', $ruby = 'ruby-2.0.0-p451', $version = 'l
 
   file {"god-init-script": 
     path => "/etc/init.d/god",
-    content => template("god/god.init")
+    mode => "0755",
+    content => template("god/god.init.erb")
   }
 
   if (!defined(Rvm_system_ruby[$ruby])) {
