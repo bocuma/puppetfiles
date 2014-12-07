@@ -1,4 +1,4 @@
-class bocuma::puppet_server {
+class bocuma::puppet_server ( $ruby = 'ruby-2.0.0-p451' ) {
   $user = 'app'
 
   include git
@@ -17,9 +17,9 @@ class bocuma::puppet_server {
   } 
   rvm::system_user { "${user}": ;  }
   rvm_system_ruby {
-  'ruby-2.0':
-    ensure      => 'present',
-    default_use => false;
+    $ruby:
+      ensure      => 'present',
+      default_use => false;
   }
 
   bocuma::directory {"puppet-config-directory":
