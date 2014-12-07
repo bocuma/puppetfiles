@@ -56,6 +56,6 @@ namespace :deploy do
     end
   end
 
-  #after :publishing, :install_library
-  #after :install_library, :restart
+  after :publishing, :install_library
+  after :install_library, :restart
 end
