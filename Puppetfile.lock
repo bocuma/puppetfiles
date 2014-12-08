@@ -47,6 +47,13 @@ FORGE
     viirya/java (0.0.5)
 
 GIT
+  remote: git://github.com/77agency/god-puppet
+  ref: master
+  sha: c522a2b8f7d03d2aa45d184583b694006f0ee28c
+  specs:
+    77agency/god (0.0.1)
+
+GIT
   remote: git://github.com/77agency/puppet-nginx.git
   ref: master
   sha: 3cb9a95cfb604fac055935997faa662b4658281d
@@ -57,20 +64,21 @@ GIT
       puppetlabs/stdlib (>= 3.0.0)
 
 GIT
-  remote: https://github.com/cammellos/puppetlabs-git.git
+  remote: git://github.com/cammellos/puppetlabs-git.git
   ref: bug/master/install_unless_defined
-  sha: 7a424aaa8605f4f00561a7999fc6d51d8db28d2f
+  sha: 198b84d1f39f6c2b861b469f5f0b0670c8c84de3
   specs:
     puppetlabs/git (0.0.1)
 
 GIT
-  remote: https://github.com/clascu/puppet-single_user_rvm
+  remote: git://github.com/clascu/puppet-single_user_rvm
   ref: master
   sha: de3186fd14f5eceaee6e2c4206eb5eada70f723e
   specs:
     eirc/single_user_rvm (0.4.0)
 
 DEPENDENCIES
+  77agency/god (>= 0)
   acme/ohmyzsh (>= 0)
   acme/ohmyzsh (>= 0)
   eirc/single_user_rvm (>= 0)

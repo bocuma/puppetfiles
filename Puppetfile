@@ -8,7 +8,7 @@ forge "https://forgeapi.puppetlabs.com"
 mod 'jfryman/nginx',
   :git => "git://github.com/77agency/puppet-nginx.git"
 mod 'puppetlabs/git',
-  git: "https://github.com/cammellos/puppetlabs-git.git", ref: "bug/master/install_unless_defined"
+  git: "git://github.com/cammellos/puppetlabs-git.git", ref: "bug/master/install_unless_defined"
 mod 'nightfly/ssh_keys'
 mod 'puppetlabs/vcsrepo'
 mod 'acme/ohmyzsh'
@@ -20,8 +20,10 @@ mod "puppetlabs/java"
 mod "maestrodev/ant"
 mod "maestrodev/maven"
 mod "puppetlabs/nodejs"
+mod "77agency/god",
+   git: "git://github.com/77agency/god-puppet"
 mod "eirc/single_user_rvm",
-   git: "https://github.com/clascu/puppet-single_user_rvm"
+   git: "git://github.com/clascu/puppet-single_user_rvm"
 mod "saz/sudo"
 mod "saz/ssh"
 mod "acme/ohmyzsh"
