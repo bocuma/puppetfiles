@@ -20,6 +20,7 @@ mod "puppetlabs/java"
 mod "maestrodev/ant"
 mod "maestrodev/maven"
 mod "puppetlabs/nodejs"
+mod "rodjek/logrotate"
 mod "77agency/god",
    git: "git://github.com/77agency/god-puppet"
 mod "eirc/single_user_rvm",

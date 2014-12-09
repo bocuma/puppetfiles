@@ -29,6 +29,7 @@ FORGE
       puppetlabs/stdlib (>= 2.0.0)
     puppetlabs/stdlib (4.2.2)
     puppetlabs/vcsrepo (1.0.2)
+    rodjek/logrotate (1.1.1)
     rtyler/jenkins (1.1.0)
       darin/zypprepo (>= 1.0.1)
       puppetlabs/apt (>= 0.0.3)
@@ -49,7 +50,7 @@ FORGE
 GIT
   remote: git://github.com/77agency/god-puppet
   ref: master
-  sha: c522a2b8f7d03d2aa45d184583b694006f0ee28c
+  sha: 41c217e135902b9aea452bc86500090d2e8dbba6
   specs:
     77agency/god (0.0.1)
 
@@ -92,6 +93,7 @@ DEPENDENCIES
   puppetlabs/mongodb (>= 0)
   puppetlabs/nodejs (>= 0)
   puppetlabs/vcsrepo (>= 0)
+  rodjek/logrotate (>= 0)
   rtyler/jenkins (>= 0)
   saz/ssh (>= 0)
   saz/sudo (>= 0)
