@@ -8,5 +8,10 @@ class bocuma::redis_server {
     restart_command => "/etc/init.d/redis_$port restart",
     pidfile => "/var/run/redis_$port.pid"
   }
+  bocuma::logrotate { "redis_$port":
+    name => "redis_$port",
+    path => "/var/log/redis_$port.log" 
+  }
+
 
 }
