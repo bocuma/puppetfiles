@@ -14,20 +14,20 @@ FORGE
     maestrodev/wget (1.5.6)
     nightfly/ssh_keys (0.0.1)
       puppetlabs/concat (>= 1.0.0)
-    puppetlabs/apt (1.5.1)
+    puppetlabs/apt (1.7.0)
       puppetlabs/stdlib (>= 2.2.1)
     puppetlabs/concat (1.1.0)
       puppetlabs/stdlib (>= 4.0.0)
     puppetlabs/gcc (0.2.0)
     puppetlabs/java (1.1.1)
       puppetlabs/stdlib (>= 0.1.6)
-    puppetlabs/mongodb (0.8.0)
+    puppetlabs/mongodb (0.9.0)
       puppetlabs/apt (>= 1.0.0)
       puppetlabs/stdlib (>= 2.2.0)
     puppetlabs/nodejs (0.6.1)
       puppetlabs/apt (>= 0.0.3)
       puppetlabs/stdlib (>= 2.0.0)
-    puppetlabs/stdlib (4.2.2)
+    puppetlabs/stdlib (4.4.0)
     puppetlabs/vcsrepo (1.0.2)
     rodjek/logrotate (1.1.1)
     rtyler/jenkins (1.1.0)
@@ -50,7 +50,7 @@ FORGE
 GIT
   remote: git://github.com/77agency/god-puppet
   ref: master
-  sha: 61dde071198801b52a5bc9232e971bfb52c89003
+  sha: 4af23a2e0b3b5226fece50e3b4b66602ec254e55
   specs:
     77agency/god (0.0.1)
 

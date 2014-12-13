@@ -1,4 +1,4 @@
-class bocuma::mongodb ($replset = "prod0", $pidfilepath = "/var/run/mongod.pid", $logpath => "/var/log/mongod/mongod.pid", $dbpath = "/srv/databases/mongodb", $config = "/etc/mongod.conf") {
+class bocuma::mongodb ($replset = "prod0", $pidfilepath = "/var/run/mongod.pid", $logpath = "/var/log/mongod.log", $dbpath = "/srv/mongod" ) {
   class {'::mongodb::globals':
     manage_package_repo => true,
   }->
@@ -7,7 +7,6 @@ class bocuma::mongodb ($replset = "prod0", $pidfilepath = "/var/run/mongod.pid",
     replset => $replset,
     pidfilepath => $pidfilepath,
     dbpath => $dbpath,
-    config => $config,
     logpath => $logpath
   } ->
   bocuma::logrotate { "mongod":
