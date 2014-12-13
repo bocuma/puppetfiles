@@ -6,6 +6,8 @@ class bocuma::mongodb ($replset = "prod0", $pidfile = "/var/run/mongod.pid", $lo
     bind_ip => ["0.0.0.0"],
     replset => $replset,
     dbpath => $dbpath,
+    pidfilepath => $pidfile,
+    fork => true,
     logpath => $logpath
   } ->
   bocuma::logrotate { "mongod":
@@ -14,7 +16,7 @@ class bocuma::mongodb ($replset = "prod0", $pidfile = "/var/run/mongod.pid", $lo
   }
   god::process { "mongod":
     name => "mongod",
-    start_command => "mongod -f $config",
+    start_command => "mongod -f /etc/mongod.conf",
     stop_command => "kill `cat $pidfile`",
     pidfile => $pidfile
   }
