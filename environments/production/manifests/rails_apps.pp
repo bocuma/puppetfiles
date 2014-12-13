@@ -31,6 +31,11 @@ define bocuma::rails_app ($app_name,$user = 'app', $state = 'present',$server_na
    mode => 770
   }
 
+  bocuma::logrotate { "/var/log/webapps/${app_name}":
+    name => "${app_name}",
+    path => "/var/log/webapps/${app_name}"
+  }
+
   if ! defined(File["/var/run/webapps"]) {
     file {"/var/run/webapps":
      ensure => "directory",
@@ -83,6 +88,6 @@ define bocuma::rails_app ($app_name,$user = 'app', $state = 'present',$server_na
 
   nginx::resource::upstream {"${app_name}":
     ensure => $state,
-    members => ["unix:///var/run/webapps/${app_name}/puma.sock"]
+    members => ["unix:///var/run/webapps/${app_name}/server.sock"]
   }
 }
