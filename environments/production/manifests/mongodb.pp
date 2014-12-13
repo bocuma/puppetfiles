@@ -1,4 +1,4 @@
-class bocuma::mongodb ($replset = "prod0",  $logpath = "/var/log/mongodb/mongod.log", $dbpath = "/srv/mongod" ) {
+class bocuma::mongodb ($replset = "prod0", $pidfile = "/var/run/mongod.pid", $logpath = "/var/log/mongodb/mongod.log", $dbpath = "/srv/mongod" ) {
   class {'::mongodb::globals':
     manage_package_repo => true,
   }->
@@ -15,7 +15,7 @@ class bocuma::mongodb ($replset = "prod0",  $logpath = "/var/log/mongodb/mongod.
   god::process { "mongod":
     name => "mongod",
     start_command => "mongod -f $config",
-    stop_command => "/etc/init.d/mongod stop",
+    stop_command => "kill `cat $pidfile`",
   }
   class {'::mongodb::client':}
 
