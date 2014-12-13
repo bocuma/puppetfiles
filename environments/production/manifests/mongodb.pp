@@ -16,6 +16,7 @@ class bocuma::mongodb ($replset = "prod0", $pidfile = "/var/run/mongod.pid", $lo
     name => "mongod",
     start_command => "mongod -f $config",
     stop_command => "kill `cat $pidfile`",
+    pidfile => $pidfile
   }
   class {'::mongodb::client':}
 
