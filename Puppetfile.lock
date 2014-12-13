@@ -50,7 +50,7 @@ FORGE
 GIT
   remote: git://github.com/77agency/god-puppet
   ref: master
-  sha: 41c217e135902b9aea452bc86500090d2e8dbba6
+  sha: 61dde071198801b52a5bc9232e971bfb52c89003
   specs:
     77agency/god (0.0.1)
 
