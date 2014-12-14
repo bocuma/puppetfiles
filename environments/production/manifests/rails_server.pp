@@ -12,7 +12,7 @@ class bocuma::rails_server {
 
   group {$nginx_user:
     name => $nginx_user,
-    members => [$nginx_user]
+    members => [$nginx_user,$user]
   }
 
   bocuma::user {"${user}":
