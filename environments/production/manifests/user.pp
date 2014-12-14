@@ -1,4 +1,4 @@
-define bocuma::user ($user = 'app',$shell = '/bin/bash', $state = 'present', $ssh_key = undef, $ssh_key_type = undef, $groups = []) {
+define bocuma::user ($user,$shell = '/bin/bash', $state = 'present', $ssh_key = undef, $ssh_key_type = undef, $groups = []) {
   user { $user:
     ensure => $state,
     managehome => true,
