@@ -3,24 +3,26 @@ class bocuma::rails_server {
   $user = 'app'
 
   package { "ImageMagick": }
-  bocuma::user {"nginx":
-    user => "nginx",
-    shell => "/sbin/nologin"
+
+  $nginx_user = nginx::params::daemon_user
+  bocuma::user {$nginx_user:
+    user => $nginx_user,
+    shell => "/bin/false"
   }
 
-  group {"nginx":
-    name => "nginx",
-    members => ["nginx"]
+  group {$nginx_user:
+    name => $nginx_user
+    members => [$nginx_user]
   }
 
   bocuma::user {"${user}":
     user => $user,
-    groups => ["nginx"]
+    groups => [$nginx_user]
   } 
 
   group {"$user":
     name => "$user",
-    members => ["$user", "nginx"]
+    members => ["$user", $nginx_user]
   }
 
 

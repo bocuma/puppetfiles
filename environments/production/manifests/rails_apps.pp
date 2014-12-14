@@ -8,26 +8,27 @@ define bocuma::rails_app ($app_name,$user = 'app', $state = 'present',$server_na
 
   }
 
+  $nginx_user = nginx::params::daemon_user
   bocuma::directory { "${app_name}-${user}-home-directory":
    dir => "/home/${user}/webapps/${app_name}",
    owner => "${user}",
    mode => 750,
-   group => "nginx"
+   group => $nginx_user
   }
 
   if ! defined(File["/var/log/webapps"]) {
     file {"/var/log/webapps":
      ensure => "directory",
-     owner => "nginx",
-     group => "nginx",
+     owner => $nginx_user,
+     group => $nginx_user,
      mode => 770
      }
     }
 
   file {"/var/log/webapps/${app_name}":
    ensure => "directory",
-   owner => "nginx",
-   group => "nginx",
+   owner => $nginx_user,
+   group => $nginx_user,
    mode => 770
   }
 
@@ -39,16 +40,16 @@ define bocuma::rails_app ($app_name,$user = 'app', $state = 'present',$server_na
   if ! defined(File["/var/run/webapps"]) {
     file {"/var/run/webapps":
      ensure => "directory",
-     owner => "nginx",
-     group => "nginx",
+     owner => $nginx_user,
+     group => $nginx_user,
      mode => 770
     }
   }
 
   file {"/var/run/webapps/${app_name}":
    ensure => "directory",
-   owner => "nginx",
-   group => "nginx",
+   owner => $nginx_user,
+   group => $nginx_user,
    mode => 770
   }
 
