@@ -4,7 +4,7 @@ class bocuma::rails_server {
 
   package { "ImageMagick": }
 
-  $nginx_user = nginx::params::daemon_user
+  $nginx_user = $nginx::params::daemon_user
   bocuma::user {$nginx_user:
     user => $nginx_user,
     shell => "/bin/false"

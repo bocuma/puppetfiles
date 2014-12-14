@@ -8,7 +8,7 @@ define bocuma::rails_app ($app_name,$user = 'app', $state = 'present',$server_na
 
   }
 
-  $nginx_user = nginx::params::daemon_user
+  $nginx_user = $nginx::params::daemon_user
   bocuma::directory { "${app_name}-${user}-home-directory":
    dir => "/home/${user}/webapps/${app_name}",
    owner => "${user}",
